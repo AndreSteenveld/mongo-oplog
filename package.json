@@ -8,6 +8,7 @@
   "types": "./src/index.d.ts",
   "scripts": {
     "test": "xo && mocha",
+    "postinstall": "npm run build",
     "build": "npm install --ignore-scripts && npm run clean && babel src -d lib",
     "prepublish": "npm run build",
     "clean": "rm -rf lib/"
